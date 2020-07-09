@@ -42,7 +42,7 @@ def on_closing(event=None):
     send()
 
 root = Tk()
-root.title("ChatIO")
+root.title("Python Chat App")
 
 messages_frame = Frame(root)
 my_msg = StringVar()  # For the messages to be sent.
@@ -65,12 +65,14 @@ send_button.pack()
 root.protocol("WM_DELETE_WINDOW", on_closing)
 
 #----Socket code----
-HOST = input('Enter host: ')
-PORT = input('Enter port: ')
+'''HOST = input('Enter host: ')
+#PORT = input('Enter port: ')
 if not PORT:
     PORT = 33002
 else:
-    PORT = int(PORT)
+    PORT = int(PORT)'''
+HOST = '127.0.0.1'
+PORT = 33002
 
 BUFSIZ = 1024
 ADDR = (HOST, PORT)
